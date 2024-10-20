@@ -3,13 +3,14 @@ import pinecone
 import openai
 import streamlit as st
 
-openai.api_key = "" ## find at platform.openai.com
+openai.api_key = "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" ## find at platform.openai.com
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-pinecone.init(api_key='', # find at app.pinecone.io
-              environment='' # next to api key in console
+pinecone.init(api_key='4f4a45d8-d09e-4e12-b1b2-0ab0fba4a851', # find at app.pinecone.io
+              environment='us-east1-gcp' # next to api key in console
              )
-index = pinecone.Index('' # index name from pinecone)
+# index = pinecone.Index('' # index name from pinecone)
+index = pinecone.Index('ce322module2')
 
 
 def find_match(input):
